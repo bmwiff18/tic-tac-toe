@@ -1,0 +1,98 @@
+body {
+font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+margin: 20px;
+}
+
+ol, ul {
+padding-left: 30px;
+}
+
+img {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+}
+
+.board-row:after {
+clear: both;
+content: "";
+display: table;
+}
+
+.status {
+margin-bottom: 10px;
+}
+
+.square {
+background: #fff;
+border: 1px solid #999;
+float: left;
+font-size: 24px;
+font-weight: bold;
+line-height: 68px;
+height: 68px;
+margin-right: -1px;
+margin-top: -1px;
+padding: 0;
+text-align: center;
+width: 68px;
+}
+
+.winnerSquare {
+background: rgb(84, 163, 93);
+border: 1px solid #999;
+float: left;
+font-size: 24px;
+font-weight: bold;
+line-height: 68px;
+height: 68px;
+margin-right: -1px;
+margin-top: -1px;
+padding: 0;
+text-align: center;
+width: 68px;
+}
+
+.square:focus {
+outline: none;
+}
+
+.kbd-navigation .square:focus {
+background: #ddd;
+}
+
+.page-title {
+font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+font-size: 24px;
+font-weight: bold;
+}
+
+.game {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+max-width: 600px;
+}
+
+.game-info {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 250;
+    height: 250;
+}
+
+.game-board {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 250;
+    height: 250;
+}
+
+.resultGif {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 25px;
+}
