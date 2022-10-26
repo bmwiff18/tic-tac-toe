@@ -1,2 +1,2 @@
 # tic-tac-toe
-simple tic tac toe game written 
+simple tic tac toe game 
