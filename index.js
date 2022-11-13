@@ -92,8 +92,8 @@ class Game extends React.Component {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
-        const colors = this.state.colors.slice();
         const loss = calculateLoss(current.squares);
+        const colors = this.state.colors.slice();
 
         const moves = history.map((step, move) => {
           const desc = move ? 
@@ -101,10 +101,11 @@ class Game extends React.Component {
             'Go to game start';
           return (
             <li key={move}>
-              <button onClick={() => this.jumpTo(move)}>{desc}</button>
+              <button className="moveButton" onClick={() => this.jumpTo(move)}>{desc}</button>
             </li>
           )
         })
+
         let status;
         if (winner) {
             status = "And the winner is... " + winner.side + '!';
@@ -120,7 +121,7 @@ class Game extends React.Component {
         const resultGif = () => {
             if (winner) {
                 return (
-                  <img src={ require('./assets/winner.gif') } alt="Winner!" />
+                    <img src={ require('./assets/winner.gif') } alt="Winner!" />
                 )
             } else if (loss) {
                 return (
@@ -129,29 +130,25 @@ class Game extends React.Component {
             }
         }
 
-
         return ( 
           <div className="game-page">
-            <header>
+            <div className="game-header">
                 <h1>Tic-Tac-Toe</h1>
                 <p>This is a simple game of tic-tac-toe. Enjoy!</p>
-            </header>
-            
-            <div className="game">
-                <div className="game-board">
-                    <Board
-                    squares={current.squares}
-                    colors={colors}
-                    onClick={(i) => this.handleClick(i)}
-                    />
-                </div>
-                <div className="resultGif">
-                    {resultGif()}
-                </div>
-                <div className="game-info">
-                    <div>{status}</div>
-                    <ol>{moves}</ol>
-                </div>
+            </div>
+            <div className="game-board">
+                <Board
+                  squares={current.squares}
+                  colors={colors}
+                  onClick={(i) => this.handleClick(i)}
+                />
+            </div>
+            <div className="game-info">
+                <div className="game-status">{status}</div>
+                <ol>{moves}</ol>
+            </div>
+            <div className="game-result-image">
+                {resultGif()}
             </div>
           </div>
         );

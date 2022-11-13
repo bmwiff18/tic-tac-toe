@@ -1,10 +1,5 @@
 body {
-font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-margin: 20px;
-}
-
-ol, ul {
-padding-left: 30px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 img {
@@ -13,44 +8,66 @@ img {
     width: 250px;
 }
 
-.board-row:after {
-clear: both;
-content: "";
-display: table;
+ol li {
+    background: #ffe5e5;
+    color: darkred;
+    padding: 5px;
+    
+    margin-left: 10px;
 }
 
-.status {
-margin-bottom: 10px;
+li {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    width: 200px;
+
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
 }
 
 .square {
-background: #fff;
-border: 1px solid #999;
-float: left;
-font-size: 24px;
-font-weight: bold;
-line-height: 68px;
-height: 68px;
-margin-right: -1px;
-margin-top: -1px;
-padding: 0;
-text-align: center;
-width: 68px;
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 68px;
+    height: 68px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 68px;
 }
 
 .winnerSquare {
-background: rgb(84, 163, 93);
-border: 1px solid #999;
-float: left;
-font-size: 24px;
-font-weight: bold;
-line-height: 68px;
-height: 68px;
-margin-right: -1px;
-margin-top: -1px;
-padding: 0;
-text-align: center;
-width: 68px;
+    background: rgb(84, 163, 93);
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 68px;
+    height: 68px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 68px;
 }
 
 .square:focus {
@@ -58,41 +75,70 @@ outline: none;
 }
 
 .kbd-navigation .square:focus {
-background: #ddd;
+    background: #ddd;
 }
 
-.page-title {
-font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-font-size: 24px;
-font-weight: bold;
+.moveButton {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    background: #000;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 20x;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 12px 20px;
+    text-align:center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
 
-.game {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-max-width: 600px;
+.moveButton:hover{
+    color: #000;
+    background: rgb(255, 255, 255);
+}
+
+.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.game-header {
+    justify-content: center;
+    padding: 3px;
+    align-self: center;
+}
+
+.game-status {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
 }
 
 .game-info {
-    margin-top: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 250;
-    height: 250;
+    align-self: center;
+    justify-content: center;
+    padding: 3px;
+    margin: 0 auto;
 }
 
 .game-board {
-    margin-top: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 250;
-    height: 250;
+    align-self: center;
+    justify-content: center;
+    padding: 3px;
+    margin: 0 auto;
 }
 
-.resultGif {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    margin-right: 25px;
+.game-result-image {
+    align-self: center;
+    justify-content: center;
+    padding: 3px;
+    margin: 0 auto;
 }
